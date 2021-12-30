@@ -27,9 +27,14 @@ return employee;
 function deleteFromEmployeeByKey(employee,key){
 
     const nwemployee={...employee};
-    delete nwemployee.key;
+     delete nwemployee[key];
 
     return nwemployee;
 };
+function destructivelyDeleteFromEmployeeByKey(employee, key) {
+    delete employee[key];
+    return employee;
+    
+}
 
  
